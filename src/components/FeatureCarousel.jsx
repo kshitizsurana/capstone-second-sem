@@ -5,35 +5,35 @@ const items = [
     id: 1,
     title: 'Web Design',
     description: 'Modern and responsive website designs.',
-    image: 'https://source.unsplash.com/300x200/?webdesign',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2344&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     link: '#'
   },
   {
     id: 2,
     title: 'SEO Services',
     description: 'Optimize your site for search engines.',
-    image: 'https://source.unsplash.com/300x200/?seo',
+    image: 'https://images.unsplash.com/photo-1684835609103-57dc56e07433?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     link: '#'
   },
   {
     id: 3,
     title: 'Digital Marketing',
     description: 'Promote your brand across the web.',
-    image: 'https://source.unsplash.com/300x200/?marketing',
+    image: 'https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=3131&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     link: '#'
   },
   {
     id: 4,
     title: 'E-Commerce Solutions',
     description: 'Sell your products online with ease.',
-    image: 'https://source.unsplash.com/300x200/?ecommerce',
+    image: 'https://images.unsplash.com/photo-1688561808434-886a6dd97b8c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     link: '#'
   },
   {
     id: 5,
     title: 'Brand Identity',
     description: 'Make your brand unforgettable.',
-    image: 'https://source.unsplash.com/300x200/?branding',
+    image: 'https://images.unsplash.com/photo-1614036634955-ae5e90f9b9eb?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     link: '#'
   }
 ];

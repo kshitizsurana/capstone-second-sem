@@ -19,12 +19,12 @@ import Services from './pages/Services';
 import Blog from './pages/Blog';
 
 const products = [
-  { id: 1, name: 'Web Development', image: 'https://via.placeholder.com/200', price: 19.99, description: 'Custom websites built for performance and scalability.' },
-  { id: 2, name: 'UI/UX Design', image: 'https://via.placeholder.com/200', price: 29.99, description: 'Designing seamless digital experiences for users.' },
-  { id: 3, name: 'SEO Optimization', image: 'https://via.placeholder.com/200', price: 39.99, description: 'Improve search rankings and visibility.' },
-  { id: 4, name: 'E-Commerce Solutions', image: 'https://via.placeholder.com/200', price: 49.99, description: 'Launch and manage online stores easily.' },
-  { id: 5, name: 'Brand Identity', image: 'https://via.placeholder.com/200', price: 59.99, description: 'Create a lasting brand impression.' },
-  { id: 6, name: 'Digital Marketing', image: 'https://via.placeholder.com/200', price: 69.99, description: 'Grow your audience through online strategies.' },
+  { id: 1, name: 'Web Development', image: 'https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?q=80&w=2348&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', price: 19.99, description: 'Custom websites built for performance and scalability.' },
+  { id: 2, name: 'UI/UX Design', image: 'https://images.unsplash.com/photo-1541462608143-67571c6738dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', price: 29.99, description: 'Designing seamless digital experiences for users.' },
+  { id: 3, name: 'SEO Optimization', image: 'https://images.unsplash.com/photo-1686061594183-8c864f508b00?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', price: 39.99, description: 'Improve search rankings and visibility.' },
+  { id: 4, name: 'E-Commerce Solutions', image: 'https://images.unsplash.com/photo-1726064855870-9a438a9517bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', price: 49.99, description: 'Launch and manage online stores easily.' },
+  { id: 5, name: 'Brand Identity', image: 'https://images.unsplash.com/photo-1614036634955-ae5e90f9b9eb?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', price: 59.99, description: 'Create a lasting brand impression.' },
+  { id: 6, name: 'Digital Marketing', image: 'https://images.unsplash.com/photo-1602343457704-131bcf6e21b2?q=80&w=3274&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', price: 69.99, description: 'Grow your audience through online strategies.' },
 ];
 
 const services = [

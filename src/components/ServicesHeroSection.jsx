@@ -4,7 +4,7 @@ const ServicesHeroSection = () => {
   const styles = {
     heroContainer: {
       position: 'relative',
-      backgroundImage: `url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?auto=format&fit=crop&w=1600&q=80')`,
+      backgroundImage: `url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       height: '65vh',

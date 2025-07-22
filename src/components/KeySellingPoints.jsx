@@ -18,7 +18,7 @@ const KeySellingPoints = () => {
         </div>
         <div style={styles.imageBlock}>
           <img
-            src="https://source.unsplash.com/500x300/?speed,technology"
+            src="https://images.unsplash.com/photo-1690192053520-c44899a79fb3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Speed and Reliability"
             style={styles.image}
           />
@@ -40,7 +40,7 @@ const KeySellingPoints = () => {
         </div>
         <div style={styles.imageBlock}>
           <img
-            src="https://source.unsplash.com/500x300/?user-experience,design"
+            src="https://images.unsplash.com/photo-1613759612065-d5971d32ca49?q=80&w=2050&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="User Focused"
             style={styles.image}
           />
