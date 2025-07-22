@@ -8,12 +8,12 @@ const KeySellingPoints = () => {
         <div style={styles.textBlock}>
           <h2>Fast & Reliable Service</h2>
           <p>
-<<<<<<< HEAD
-            We prioritize speed and reliability. Our services are built with modern infrastructure,
-            ensuring your website or product is delivered quickly and remains available around the clock.
-=======
-           At BrandLift, speed and reliability are not just features — they’re our foundation. We leverage cutting-edge infrastructure and the latest web technologies to ensure your digital presence is fast, secure, and scalable. Whether it’s a sleek website or a robust product platform, we deliver with precision, minimizing load times and maximizing uptime. With 24/7 availability and enterprise-grade performance, your business stays ahead — always accessible, always optimized.
->>>>>>> f90fde9 (adding new files)
+            At BrandLift, speed and reliability are not just features — they’re our foundation.
+            We leverage cutting-edge infrastructure and the latest web technologies to ensure
+            your digital presence is fast, secure, and scalable. Whether it’s a sleek website
+            or a robust product platform, we deliver with precision, minimizing load times and
+            maximizing uptime. With 24/7 availability and enterprise-grade performance, your
+            business stays ahead — always accessible, always optimized.
           </p>
         </div>
         <div style={styles.imageBlock}>
@@ -30,12 +30,12 @@ const KeySellingPoints = () => {
         <div style={styles.textBlock}>
           <h2>User-Centric Design</h2>
           <p>
-<<<<<<< HEAD
-            Every element is designed with the user in mind. We focus on intuitive interfaces and engaging
-            experiences that keep your audience connected and coming back.
-=======
-            Every element we create is rooted in empathy and intentionality — designed with the user at the core. From seamless navigation to visually captivating layouts, we craft intuitive interfaces that feel natural, not forced. Our approach blends aesthetics with functionality, ensuring your audience not only connects effortlessly but enjoys every interaction. The result? Memorable digital experiences that build trust, boost engagement, and keep your users coming back for more.
->>>>>>> f90fde9 (adding new files)
+            Every element we create is rooted in empathy and intentionality — designed with
+            the user at the core. From seamless navigation to visually captivating layouts,
+            we craft intuitive interfaces that feel natural, not forced. Our approach blends
+            aesthetics with functionality, ensuring your audience not only connects effortlessly
+            but enjoys every interaction. The result? Memorable digital experiences that build
+            trust, boost engagement, and keep your users coming back for more.
           </p>
         </div>
         <div style={styles.imageBlock}>
@@ -79,7 +79,7 @@ const styles = {
     maxWidth: '500px',
     borderRadius: '8px',
     boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-  }
+  },
 };
 
 export default KeySellingPoints;

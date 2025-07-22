@@ -4,7 +4,7 @@ const ServicesHeroSection = () => {
   const styles = {
     heroContainer: {
       position: 'relative',
-      backgroundImage: `url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?auto=format&fit=crop&w=1600&q=80')`, // Replace with a relevant image
+      backgroundImage: `url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?auto=format&fit=crop&w=1600&q=80')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       height: '65vh',
@@ -32,6 +32,11 @@ const ServicesHeroSection = () => {
       fontSize: '2.8rem',
       fontWeight: 'bold',
       lineHeight: '1.3',
+      marginBottom: '10px',
+    },
+    subheading: {
+      fontSize: '1.5rem',
+      fontWeight: '500',
     },
   };
 
@@ -40,10 +45,7 @@ const ServicesHeroSection = () => {
       <div style={styles.overlay}></div>
       <div style={styles.textContainer}>
         <h1 style={styles.tagline}>Services Designed for Your Success</h1>
-<<<<<<< HEAD
-=======
-        <h2>Strategic Services. Superior Outcomes.</h2>
->>>>>>> f90fde9 (adding new files)
+        <h2 style={styles.subheading}>Strategic Services. Superior Outcomes.</h2>
       </div>
     </section>
   );

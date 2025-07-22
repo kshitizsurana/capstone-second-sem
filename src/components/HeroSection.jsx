@@ -19,11 +19,9 @@ const HeroSection = () => {
         <div style={styles.content}>
           <div style={styles.tagline}>
             <h1 style={styles.heading}>Empowering Ideas, Elevating Brands</h1>
-<<<<<<< HEAD
-            <p style={styles.subheading}>Discover our services, blog, and more — all crafted to inspire.</p>
-=======
-            <p style={styles.subheading}>Explore our services, dive into expert insights on our blog, and uncover ideas crafted to inspire, inform, and elevate your brand</p>
->>>>>>> f90fde9 (adding new files)
+            <p style={styles.subheading}>
+              Explore our services, dive into expert insights on our blog, and uncover ideas crafted to inspire, inform, and elevate your brand.
+            </p>
           </div>
           <form style={styles.form} onSubmit={handleSubmit}>
             <input

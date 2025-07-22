@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-<<<<<<< HEAD
-const Navbar = ({ setPage, currentPage }) => {
-=======
 const Navbar = ({ setPage, currentPage, cartCount = 0 }) => {
->>>>>>> f90fde9 (adding new files)
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -14,18 +10,15 @@ const Navbar = ({ setPage, currentPage, cartCount = 0 }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-<<<<<<< HEAD
-=======
   const safeSetPage = (page) => {
     if (typeof setPage === 'function') {
       setPage(page);
-      setMenuOpen(false); // close menu on navigation
+      setMenuOpen(false); // Close menu on navigation
     } else {
       console.warn('setPage is not a function');
     }
   };
 
->>>>>>> f90fde9 (adding new files)
   const navStyle = {
     display: 'flex',
     justifyContent: 'space-between',
@@ -48,10 +41,7 @@ const Navbar = ({ setPage, currentPage, cartCount = 0 }) => {
     cursor: 'pointer',
     color: currentPage === page ? '#00bfff' : '#fff',
     borderBottom: currentPage === page ? '2px solid #00bfff' : 'none',
-<<<<<<< HEAD
-=======
     position: 'relative',
->>>>>>> f90fde9 (adding new files)
   });
 
   const navLinksStyle = {
@@ -84,15 +74,6 @@ const Navbar = ({ setPage, currentPage, cartCount = 0 }) => {
     margin: '4px 0',
   };
 
-<<<<<<< HEAD
-  // Add safeguard fallback in case setPage is not passed
-  const safeSetPage = (page) => {
-    if (typeof setPage === 'function') {
-      setPage(page);
-    } else {
-      console.warn('setPage is not a function');
-    }
-=======
   const badgeStyle = {
     backgroundColor: 'red',
     color: 'white',
@@ -102,17 +83,12 @@ const Navbar = ({ setPage, currentPage, cartCount = 0 }) => {
     position: 'absolute',
     top: '-8px',
     right: '-10px',
->>>>>>> f90fde9 (adding new files)
   };
 
   return (
     <div style={navStyle}>
       <div style={logoStyle} onClick={() => safeSetPage('home')}>
-<<<<<<< HEAD
-        MyLogo
-=======
         MyShop
->>>>>>> f90fde9 (adding new files)
       </div>
 
       <div style={hamburgerStyle} onClick={() => setMenuOpen(!menuOpen)}>
@@ -126,13 +102,6 @@ const Navbar = ({ setPage, currentPage, cartCount = 0 }) => {
         <span style={linkStyle('about')} onClick={() => safeSetPage('about')}>About</span>
         <span style={linkStyle('services')} onClick={() => safeSetPage('services')}>Services</span>
         <span style={linkStyle('blog')} onClick={() => safeSetPage('blog')}>Blog</span>
-<<<<<<< HEAD
-      </div>
-
-      <div style={authStyle}>
-        <button style={{ margin: '5px', cursor: 'pointer' }}>Login</button>
-        <button style={{ margin: '5px', cursor: 'pointer' }}>Signup</button>
-=======
         <span style={linkStyle('products')} onClick={() => safeSetPage('products')}>Products</span>
         <span style={{ ...linkStyle('cart'), position: 'relative' }} onClick={() => safeSetPage('cart')}>
           Cart
@@ -143,7 +112,6 @@ const Navbar = ({ setPage, currentPage, cartCount = 0 }) => {
       <div style={authStyle}>
         <button style={{ margin: '5px', cursor: 'pointer' }} onClick={() => safeSetPage('login')}>Login</button>
         <button style={{ margin: '5px', cursor: 'pointer' }} onClick={() => safeSetPage('signup')}>Signup</button>
->>>>>>> f90fde9 (adding new files)
       </div>
     </div>
   );

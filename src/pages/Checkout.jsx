@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 import { useCart } from '../context/CartContext';
-=======
+
 // import { useCart } from '../context/CartContext';
->>>>>>> f90fde9 (adding new files)
+
 
 const Checkout = () => {
   const { cart, updateQuantity, removeFromCart } = useCart();

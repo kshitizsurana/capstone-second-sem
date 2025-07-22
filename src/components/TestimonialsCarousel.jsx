@@ -2,7 +2,6 @@ import React from 'react';
 
 const testimonials = [
   {
-<<<<<<< HEAD
     name: 'Aarav Mehta',
     review: 'Absolutely wonderful service. I’m impressed by the professionalism and quality!',
     photo: 'https://randomuser.me/api/portraits/men/32.jpg',
@@ -21,7 +20,8 @@ const testimonials = [
     name: 'Neha Patil',
     review: 'Loved the design and ease of use. It has helped grow my small business!',
     photo: 'https://randomuser.me/api/portraits/women/67.jpg',
-=======
+  },
+  {
     name: 'Jane Doe',
     text: 'This service transformed our business! Highly recommended.',
     company: 'Acme Corp',
@@ -35,21 +35,22 @@ const testimonials = [
     name: 'Alice Johnson',
     text: 'Exceeded our expectations in every way.',
     company: 'Gamma Inc',
->>>>>>> f90fde9 (adding new files)
   },
 ];
 
 const TestimonialsCarousel = () => {
   return (
-<<<<<<< HEAD
     <div style={styles.wrapper}>
       <h2 style={styles.title}>What Our Customers Say</h2>
       <div style={styles.carousel}>
         {testimonials.map((t, index) => (
           <div key={index} style={styles.card}>
             {t.photo && <img src={t.photo} alt={t.name} style={styles.photo} />}
-            <p style={styles.review}>“{t.review}”</p>
+            <p style={styles.review}>
+              “{t.review || t.text}”
+            </p>
             <h4 style={styles.name}>— {t.name}</h4>
+            {t.company && <p style={styles.company}>{t.company}</p>}
           </div>
         ))}
       </div>
@@ -102,25 +103,11 @@ const styles = {
     color: '#222',
     fontWeight: 'bold',
   },
+  company: {
+    fontSize: '14px',
+    color: '#888',
+    marginTop: '4px',
+  },
 };
 
-=======
-    <section className="py-16 bg-white">
-      <div className="max-w-3xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">What Our Clients Say</h2>
-        <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
-          {testimonials.map((t, idx) => (
-            <div key={idx} className="bg-gray-100 rounded-xl shadow p-6 flex-1 text-center hover:shadow-lg transition">
-              <p className="text-lg italic mb-4">"{t.text}"</p>
-              <div className="font-semibold text-blue-600">{t.name}</div>
-              <div className="text-gray-500 text-sm">{t.company}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
->>>>>>> f90fde9 (adding new files)
 export default TestimonialsCarousel;

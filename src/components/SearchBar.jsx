@@ -1,31 +1,5 @@
 import React, { useState } from 'react';
 
-<<<<<<< HEAD
-const SearchBar = ({ onSearch }) => {
-  const [query, setQuery] = useState('');
-
-  const handleSearch = () => {
-    onSearch(query);
-  };
-
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') handleSearch();
-  };
-
-  return (
-    <div style={styles.wrapper}>
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        onClick={handleKeyPress}
-        placeholder="Search for products, services, or blog posts"
-        style={styles.input}
-      />
-      <button onClick={handleSearch} style={styles.button}>
-        🔍
-      </button>
-=======
 const SearchBar = ({ onSearch, results = [], onResultClick }) => {
   const [query, setQuery] = useState('');
   const [searchPerformed, setSearchPerformed] = useState(false);
@@ -83,27 +57,11 @@ const SearchBar = ({ onSearch, results = [], onResultClick }) => {
           )}
         </div>
       )}
->>>>>>> f90fde9 (adding new files)
     </div>
   );
 };
 
 const styles = {
-<<<<<<< HEAD
-  wrapper: {
-    display: 'flex',
-    alignItems: 'center',
-    margin: '20px auto',
-    maxWidth: '600px',
-    width: '90%',
-    background: '#f0f0f0',
-    borderRadius: '5px',
-    overflow: 'hidden',
-  },
-  input: {
-    flex: 1,
-    padding: '10px 15px',
-=======
   container: {
     marginTop: '20px',
     marginBottom: '20px',
@@ -122,22 +80,12 @@ const styles = {
   input: {
     flex: 1,
     padding: '12px 16px',
->>>>>>> f90fde9 (adding new files)
     border: 'none',
     fontSize: '16px',
     outline: 'none',
     background: 'transparent',
   },
   button: {
-<<<<<<< HEAD
-    padding: '10px 15px',
-    border: 'none',
-    background: '#333',
-    color: 'white',
-    cursor: 'pointer',
-    fontSize: '16px',
-  },
-=======
     padding: '12px 16px',
     border: 'none',
     backgroundColor: '#333',
@@ -185,7 +133,6 @@ const styles = {
     textAlign: 'center',
     marginTop: '10px',
   },
->>>>>>> f90fde9 (adding new files)
 };
 
 export default SearchBar;

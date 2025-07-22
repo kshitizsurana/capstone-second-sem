@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from './components/Firebase';
->>>>>>> f90fde9 (adding new files)
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import SearchBar from './components/SearchBar';
@@ -12,21 +9,14 @@ import HeroSection from './components/HeroSection';
 import FeatureCarousel from './components/FeatureCarousel';
 import KeySellingPoints from './components/KeySellingPoints';
 import TestimonialsCarousel from './components/TestimonialsCarousel';
-import About from './pages/About';
-import Services from './pages/Services';
-import Blog from './pages/Blog';
-<<<<<<< HEAD
-
-const App = () => {
-  const [page, setPage] = useState('home');
-
-  const handleSearch = (query) => {
-    alert(`Searching for: ${query}`);
-=======
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 import Login from './components/Login';
 import Signup from './components/Signup';
+
+import About from './pages/About';
+import Services from './pages/Services';
+import Blog from './pages/Blog';
 
 const products = [
   { id: 1, name: 'Web Development', image: 'https://via.placeholder.com/200', price: 19.99, description: 'Custom websites built for performance and scalability.' },
@@ -139,26 +129,20 @@ const App = () => {
         )
         .filter(item => item.quantity > 0)
     );
->>>>>>> f90fde9 (adding new files)
   };
 
   const renderPage = () => {
     switch (page) {
-<<<<<<< HEAD
-=======
       case 'login':
         return <Login onSwitch={() => setPage('signup')} />;
       case 'signup':
         return <Signup onSwitch={() => setPage('login')} />;
->>>>>>> f90fde9 (adding new files)
       case 'about':
         return <About />;
       case 'services':
         return <Services />;
       case 'blog':
         return <Blog />;
-<<<<<<< HEAD
-=======
       case 'products':
         return <ProductList products={products} addToCart={handleAddToCart} />;
       case 'cart':
@@ -170,21 +154,16 @@ const App = () => {
             decreaseQuantity={decreaseQuantity}
           />
         );
->>>>>>> f90fde9 (adding new files)
       case 'home':
       default:
         return (
           <>
-<<<<<<< HEAD
-            <SearchBar onSearch={handleSearch} />
-=======
             <SearchBar
               onSearch={handleSearch}
               results={searchResults}
               onResultClick={handleResultClick}
               searchPerformed={searchPerformed}
             />
->>>>>>> f90fde9 (adding new files)
             <HeroSection />
             <FeatureCarousel />
             <KeySellingPoints />
@@ -196,9 +175,6 @@ const App = () => {
 
   return (
     <div>
-<<<<<<< HEAD
-      <Navbar setPage={setPage} currentPage={page} />
-=======
       <Navbar
         setPage={setPage}
         currentPage={page}
@@ -206,7 +182,6 @@ const App = () => {
         user={user}
         onLogout={handleLogout}
       />
->>>>>>> f90fde9 (adding new files)
       {renderPage()}
       <Footer />
     </div>

@@ -15,11 +15,7 @@ const blogPosts = [
     author: 'John Smith',
   },
   {
-<<<<<<< HEAD
-    title: 'Design Trends You Shouldnt Miss',
-=======
     title: 'Design Trends You Shouldn’t Miss',
->>>>>>> f90fde9 (adding new files)
     description: 'Explore the latest design trends that will shape the digital world.',
     image: 'https://via.placeholder.com/400x200?text=Design+Trends',
     author: 'Emily Johnson',
@@ -33,54 +29,6 @@ const Blog = () => {
       maxWidth: '1000px',
       margin: '0 auto',
     },
-    post: {
-      background: '#f9f9f9',
-      marginBottom: '30px',
-      borderRadius: '8px',
-      overflow: 'hidden',
-      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      padding: '20px',
-      gap: '20px',
-    },
-    image: {
-      width: '200px',
-      height: 'auto',
-      borderRadius: '6px',
-      flexShrink: 0,
-    },
-    content: {
-      flex: 1,
-      textAlign: 'left',
-    },
-    title: {
-      fontSize: '1.5rem',
-      marginBottom: '10px',
-    },
-    desc: {
-      marginBottom: '10px',
-    },
-    author: {
-      fontStyle: 'italic',
-      color: '#555',
-    },
-    readMore: {
-      marginTop: '10px',
-      display: 'inline-block',
-      color: '#007bff',
-<<<<<<< HEAD
-      textDecoration: 'none',
-=======
-      background: 'none',
-      border: 'none',
-      padding: 0,
-      font: 'inherit',
-      cursor: 'pointer',
-      textDecoration: 'underline',
->>>>>>> f90fde9 (adding new files)
-    },
     carousel: {
       display: 'flex',
       overflowX: 'auto',
@@ -89,14 +37,53 @@ const Blog = () => {
       scrollSnapType: 'x mandatory',
     },
     card: {
-      minWidth: '250px',
+      minWidth: '300px',
       background: '#fff',
       boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
       borderRadius: '8px',
-      cursor: 'pointer',
       scrollSnapAlign: 'start',
-      transition: 'transform 0.3s',
       flexShrink: 0,
+      overflow: 'hidden',
+      display: 'flex',
+      flexDirection: 'column',
+      transition: 'transform 0.3s',
+    },
+    image: {
+      width: '100%',
+      height: '200px',
+      objectFit: 'cover',
+    },
+    content: {
+      padding: '16px',
+      display: 'flex',
+      flexDirection: 'column',
+      flex: 1,
+    },
+    title: {
+      fontSize: '1.25rem',
+      fontWeight: 'bold',
+      marginBottom: '10px',
+    },
+    desc: {
+      flexGrow: 1,
+      marginBottom: '10px',
+      color: '#555',
+    },
+    author: {
+      fontStyle: 'italic',
+      color: '#777',
+      fontSize: '0.9rem',
+    },
+    readMore: {
+      marginTop: '10px',
+      color: '#007bff',
+      background: 'none',
+      border: 'none',
+      padding: 0,
+      font: 'inherit',
+      cursor: 'pointer',
+      textDecoration: 'underline',
+      alignSelf: 'flex-start',
     },
   };
 
@@ -113,16 +100,12 @@ const Blog = () => {
                 <h3 style={styles.title}>{post.title}</h3>
                 <p style={styles.desc}>{post.description}</p>
                 <p style={styles.author}>By {post.author}</p>
-<<<<<<< HEAD
-                <a href=" " style={styles.readMore}>Read More →</a>
-=======
                 <button
                   style={styles.readMore}
-                  onClick={() => alert('Read more coming soon!')}
+                  onClick={() => alert(`Coming soon: "${post.title}"`)}
                 >
                   Read More →
                 </button>
->>>>>>> f90fde9 (adding new files)
               </div>
             </div>
           ))}
