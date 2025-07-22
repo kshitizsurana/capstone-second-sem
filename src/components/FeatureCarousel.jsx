@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-// import React from 'react';
->>>>>>> f90fde9 (adding new files)
 
 const items = [
   {
@@ -10,50 +6,35 @@ const items = [
     title: 'Web Design',
     description: 'Modern and responsive website designs.',
     image: 'https://source.unsplash.com/300x200/?webdesign',
-<<<<<<< HEAD
     link: '#'
-=======
->>>>>>> f90fde9 (adding new files)
   },
   {
     id: 2,
     title: 'SEO Services',
     description: 'Optimize your site for search engines.',
     image: 'https://source.unsplash.com/300x200/?seo',
-<<<<<<< HEAD
     link: '#'
-=======
->>>>>>> f90fde9 (adding new files)
   },
   {
     id: 3,
     title: 'Digital Marketing',
     description: 'Promote your brand across the web.',
     image: 'https://source.unsplash.com/300x200/?marketing',
-<<<<<<< HEAD
     link: '#'
-=======
->>>>>>> f90fde9 (adding new files)
   },
   {
     id: 4,
     title: 'E-Commerce Solutions',
     description: 'Sell your products online with ease.',
     image: 'https://source.unsplash.com/300x200/?ecommerce',
-<<<<<<< HEAD
     link: '#'
-=======
->>>>>>> f90fde9 (adding new files)
   },
   {
     id: 5,
     title: 'Brand Identity',
     description: 'Make your brand unforgettable.',
     image: 'https://source.unsplash.com/300x200/?branding',
-<<<<<<< HEAD
     link: '#'
-=======
->>>>>>> f90fde9 (adding new files)
   }
 ];
 
@@ -67,10 +48,7 @@ const FeatureCarousel = () => {
             <img src={item.image} alt={item.title} style={styles.image} />
             <h3 style={styles.title}>{item.title}</h3>
             <p style={styles.description}>{item.description}</p>
-<<<<<<< HEAD
             <a href={item.link} style={styles.button}>Learn More</a>
-=======
->>>>>>> f90fde9 (adding new files)
           </div>
         ))}
       </div>
@@ -119,7 +97,6 @@ const styles = {
     fontSize: '14px',
     marginBottom: '10px',
     color: '#555'
-<<<<<<< HEAD
   },
   button: {
     display: 'inline-block',
@@ -129,8 +106,6 @@ const styles = {
     textDecoration: 'none',
     borderRadius: '4px',
     fontSize: '14px'
-=======
->>>>>>> f90fde9 (adding new files)
   }
 };
 
