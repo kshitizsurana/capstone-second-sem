@@ -1,0 +1,216 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { auth } from './components/Firebase';
+>>>>>>> f90fde9 (adding new files)
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import SearchBar from './components/SearchBar';
+import HeroSection from './components/HeroSection';
+import FeatureCarousel from './components/FeatureCarousel';
+import KeySellingPoints from './components/KeySellingPoints';
+import TestimonialsCarousel from './components/TestimonialsCarousel';
+import About from './pages/About';
+import Services from './pages/Services';
+import Blog from './pages/Blog';
+<<<<<<< HEAD
+
+const App = () => {
+  const [page, setPage] = useState('home');
+
+  const handleSearch = (query) => {
+    alert(`Searching for: ${query}`);
+=======
+import ProductList from './components/ProductList';
+import Cart from './components/Cart';
+import Login from './components/Login';
+import Signup from './components/Signup';
+
+const products = [
+  { id: 1, name: 'Web Development', image: 'https://via.placeholder.com/200', price: 19.99, description: 'Custom websites built for performance and scalability.' },
+  { id: 2, name: 'UI/UX Design', image: 'https://via.placeholder.com/200', price: 29.99, description: 'Designing seamless digital experiences for users.' },
+  { id: 3, name: 'SEO Optimization', image: 'https://via.placeholder.com/200', price: 39.99, description: 'Improve search rankings and visibility.' },
+  { id: 4, name: 'E-Commerce Solutions', image: 'https://via.placeholder.com/200', price: 49.99, description: 'Launch and manage online stores easily.' },
+  { id: 5, name: 'Brand Identity', image: 'https://via.placeholder.com/200', price: 59.99, description: 'Create a lasting brand impression.' },
+  { id: 6, name: 'Digital Marketing', image: 'https://via.placeholder.com/200', price: 69.99, description: 'Grow your audience through online strategies.' },
+];
+
+const services = [
+  { id: 101, title: 'SEO Services', description: 'Rank higher in search engines.', image: 'https://source.unsplash.com/300x200/?seo' },
+  { id: 102, title: 'Digital Marketing', description: 'Drive traffic and conversions.', image: 'https://source.unsplash.com/300x200/?marketing' },
+  { id: 103, title: 'E-Commerce Solutions', description: 'Boost your online store.', image: 'https://source.unsplash.com/300x200/?ecommerce' },
+  { id: 104, title: 'Brand Identity', description: 'Build a unique brand voice.', image: 'https://source.unsplash.com/300x200/?branding' },
+];
+
+const blogPosts = [
+  { id: 201, title: 'Top 10 Web Trends 2025', description: 'Discover the latest trends in web design.', image: 'https://source.unsplash.com/300x200/?blog,design' },
+  { id: 202, title: 'How SEO Can Save Your Business', description: 'Learn why SEO is critical today.', image: 'https://source.unsplash.com/300x200/?blog,seo' },
+];
+
+const App = () => {
+  const [page, setPage] = useState('home');
+  const [cartItems, setCartItems] = useState([]);
+  const [user, setUser] = useState(null);
+  const [searchResults, setSearchResults] = useState([]);
+  const [searchPerformed, setSearchPerformed] = useState(false);
+
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+    return () => unsub();
+  }, []);
+
+  const handleLogout = () => {
+    signOut(auth);
+  };
+
+  const handleSearch = (query) => {
+    const lowerQuery = query.toLowerCase();
+
+    const matchedProducts = products.filter(p =>
+      p.name.toLowerCase().includes(lowerQuery) || p.description.toLowerCase().includes(lowerQuery)
+    );
+
+    const matchedServices = services.filter(s =>
+      s.title.toLowerCase().includes(lowerQuery) || s.description.toLowerCase().includes(lowerQuery)
+    );
+
+    const matchedBlogs = blogPosts.filter(b =>
+      b.title.toLowerCase().includes(lowerQuery) || b.description.toLowerCase().includes(lowerQuery)
+    );
+
+    const results = [
+      ...matchedProducts.map(r => ({ ...r, type: 'product' })),
+      ...matchedServices.map(r => ({ ...r, type: 'service' })),
+      ...matchedBlogs.map(r => ({ ...r, type: 'blog' })),
+    ];
+
+    setSearchPerformed(true);
+    setSearchResults(results);
+  };
+
+  const handleResultClick = (result) => {
+    if (result.type === 'product') {
+      setPage('products');
+    } else if (result.type === 'service') {
+      setPage('services');
+    } else if (result.type === 'blog') {
+      setPage('blog');
+    }
+  };
+
+  const handleAddToCart = (product) => {
+    setCartItems(prevItems => {
+      const existing = prevItems.find(item => item.id === product.id);
+      if (existing) {
+        return prevItems.map(item =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      } else {
+        return [...prevItems, { ...product, quantity: 1 }];
+      }
+    });
+  };
+
+  const handleRemoveFromCart = (productId) => {
+    setCartItems(prevItems => prevItems.filter(item => item.id !== productId));
+  };
+
+  const increaseQuantity = (productId) => {
+    setCartItems(prevItems =>
+      prevItems.map(item =>
+        item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
+  };
+
+  const decreaseQuantity = (productId) => {
+    setCartItems(prevItems =>
+      prevItems
+        .map(item =>
+          item.id === productId
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+        .filter(item => item.quantity > 0)
+    );
+>>>>>>> f90fde9 (adding new files)
+  };
+
+  const renderPage = () => {
+    switch (page) {
+<<<<<<< HEAD
+=======
+      case 'login':
+        return <Login onSwitch={() => setPage('signup')} />;
+      case 'signup':
+        return <Signup onSwitch={() => setPage('login')} />;
+>>>>>>> f90fde9 (adding new files)
+      case 'about':
+        return <About />;
+      case 'services':
+        return <Services />;
+      case 'blog':
+        return <Blog />;
+<<<<<<< HEAD
+=======
+      case 'products':
+        return <ProductList products={products} addToCart={handleAddToCart} />;
+      case 'cart':
+        return (
+          <Cart
+            items={cartItems}
+            removeFromCart={handleRemoveFromCart}
+            increaseQuantity={increaseQuantity}
+            decreaseQuantity={decreaseQuantity}
+          />
+        );
+>>>>>>> f90fde9 (adding new files)
+      case 'home':
+      default:
+        return (
+          <>
+<<<<<<< HEAD
+            <SearchBar onSearch={handleSearch} />
+=======
+            <SearchBar
+              onSearch={handleSearch}
+              results={searchResults}
+              onResultClick={handleResultClick}
+              searchPerformed={searchPerformed}
+            />
+>>>>>>> f90fde9 (adding new files)
+            <HeroSection />
+            <FeatureCarousel />
+            <KeySellingPoints />
+            <TestimonialsCarousel />
+          </>
+        );
+    }
+  };
+
+  return (
+    <div>
+<<<<<<< HEAD
+      <Navbar setPage={setPage} currentPage={page} />
+=======
+      <Navbar
+        setPage={setPage}
+        currentPage={page}
+        cartCount={cartItems.reduce((sum, item) => sum + item.quantity, 0)}
+        user={user}
+        onLogout={handleLogout}
+      />
+>>>>>>> f90fde9 (adding new files)
+      {renderPage()}
+      <Footer />
+    </div>
+  );
+};
+
+export default App;
